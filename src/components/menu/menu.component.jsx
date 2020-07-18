@@ -11,7 +11,7 @@ class Menu extends React.Component {
                 title: 'hats',
                 imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                 id: 1,
-                linkUrl: 'shop/hats'
+                linkUrl: 'hats'
               },
               {
                 title: 'jackets',
@@ -45,7 +45,7 @@ class Menu extends React.Component {
     render(){
         return (<div className="menu">
             {this.state.categories.map( ca => 
-            (<MenuCategory key={ca.id} title={ca.title} imgURL={ca.imageUrl} size={ca.size}/>))
+            (<MenuCategory key={ca.id} title={ca.title} imgURL={ca.imageUrl} size={ca.size} linkUrl={ca.linkUrl}/>))
         }
         </div>);
     }

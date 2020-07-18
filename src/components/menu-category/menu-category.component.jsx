@@ -1,8 +1,9 @@
 import React from "react";
 import "./menu-category.styles.scss";
+import {withRouter} from 'react-router-dom';
 
-const MenuCategory = ({title, imgURL, size}) => (
-    <div className={`${size} category`} >
+const MenuCategory = ({title, imgURL, size, history, match, linkUrl}) => (
+    <div className={`${size} category`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
         <div className="background-image" style=
             {{backgroundImage: `url(${imgURL})`}}>
         </div>
@@ -13,4 +14,4 @@ const MenuCategory = ({title, imgURL, size}) => (
 </div>
 );
 
-export default MenuCategory;
+export default withRouter(MenuCategory);
