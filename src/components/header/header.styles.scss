@@ -9,10 +9,10 @@ header {
         height: 100%;
         width: 100%;
     }
+
     .logo-container {
       height: 100%;
       width: 70px;
-      padding: 25px;
     }
   
     .options {
@@ -24,6 +24,7 @@ header {
   
       .option {
         padding: 10px 15px;
+        cursor: pointer;
       }
     }
   }
