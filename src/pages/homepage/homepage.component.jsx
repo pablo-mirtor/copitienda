@@ -1,10 +1,10 @@
 import React from "react";
 import "./homepage.styles.scss";
-import Menu from "../../components/menu/menu.component";
+import Directory from "../../components/directory/directory.component";
 
 const Homepage = () => (
 <div className="homepage">
-    <Menu></Menu>
+    <Directory></Directory>
 </div>);
 
 export default Homepage;
