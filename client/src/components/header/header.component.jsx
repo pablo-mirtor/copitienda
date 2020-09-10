@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {ReactComponent as Logo} from '../../assets/gato.svg';
+import {ReactComponent as MenuIcon} from '../../assets/menu-black-18dp.svg';
 import { connect } from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 
@@ -29,6 +30,7 @@ const Header = ({currentUser, hidden, signOutStart}) => (
             }
             <CartIcon/>
         </div>
+        <MenuIcon className="menu-icon"/>
         {   hidden ? 
             null : (<CartDropdown/>) }
     </header>

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './App.css';
+import './App.scss';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import Homepage from "./pages/homepage/homepage.component";
 import ShopPage from './pages/shoppage/shoppage.component';
@@ -20,14 +20,15 @@ const App = ({checkUserSession, currentUser}) => {
   return (
       <div>
         <Header/>
-        <Switch>
-            <Route exact path='/' component={Homepage}></Route>
-            <Route path='/shop' component={ShopPage}></Route>
-            <Route exact path='/checkout' component={CheckoutPage}></Route>
-            <Route path='/signin' render={() => 
-              currentUser ? (<Redirect to='/'/>) : (<SignUpSignInPage/>)}></Route>
-        </Switch>
-
+        <main className='content'>
+          <Switch className='content'>
+              <Route exact path='/' component={Homepage}></Route>
+              <Route path='/shop' component={ShopPage}></Route>
+              <Route exact path='/checkout' component={CheckoutPage}></Route>
+              <Route path='/signin' render={() => 
+                currentUser ? (<Redirect to='/'/>) : (<SignUpSignInPage/>)}></Route>
+          </Switch>
+        </main>
       </div>
     );
 }

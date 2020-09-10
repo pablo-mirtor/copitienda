@@ -22,9 +22,17 @@ const StripeCheckoutButton = ({price}) => {
         })
     }
     return(
-    <StripeCheckout label='Pagar ahora' name='Copitienda SA'
-    billingAddress shippingAddress image='' description={`El total es ${price}€`}
-    currency='EUR' amount={priceForStripe} token={onToken} stripeKey={publishableKey}/>
+    <StripeCheckout 
+        label='Pagar ahora' 
+        name='Copitienda SA'
+        billingAddress 
+        shippingAddress 
+        image='' 
+        description={`El total es ${price}€`}
+        currency='EUR' 
+        amount={priceForStripe} 
+        token={onToken} 
+        stripeKey={publishableKey}/>
 )};
 
 export default StripeCheckoutButton;
