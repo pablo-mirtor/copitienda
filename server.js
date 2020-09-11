@@ -9,7 +9,7 @@ if(process.env.NODE_ENV !== 'production')
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
 
 app.use(compression());
@@ -23,7 +23,7 @@ if(process.env.NODE_ENV === 'production'){
     
     app.get('*', function(req, res) {
         res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-    })
+    });
 }
 
 app.listen(port, error => {
