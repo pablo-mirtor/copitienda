@@ -38,7 +38,10 @@ const CheckoutPage = ({cartItems, total}) => (
             *Por favor, utiliza la tarjeta de crédito de prueba <br/>
             4242 4242 4242 4242 - Exp: 10/23 - CVC: 123*
         </div>
-        <StripeCheckoutButton price={total}/>
+        {
+            total !== 0 ? <StripeCheckoutButton price={total}/> : <p>Añade productos a la cesta</p>
+        }
+        
     </div>
 );
 
